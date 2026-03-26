@@ -508,6 +508,10 @@ a { color: inherit; text-decoration: none; transition: color var(--dur) var(--ea
   .cta-final { padding: 88px 0; }
 }
 
+/* ── IMAGEM COMPLEMENTAR ── */
+.img-complementar { line-height: 0; }
+.img-complementar__img { width: 100%; display: block; object-fit: cover; }
+
 /* =============================================
    BLOG
    ============================================= */
