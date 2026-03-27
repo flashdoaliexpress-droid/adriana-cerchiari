@@ -364,8 +364,65 @@
           <span class="dep-card__author">Paciente Google</span>
         </div>
       </div>
+
+      <!-- Depoimentos ocultos -->
+      <div class="dep__hidden" id="depHidden" aria-hidden="true">
+        <div class="dep__grid dep__grid--hidden">
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"A Dra. Adriana é sem dúvida uma excelente profissional, atenciosa e com planos alimentares que é possível realizar no dia a dia. Com as orientações e o acompanhamento consegui adaptar minha rotina alimentar que me trouxe muitos benefícios. Recomendo!!"</p>
+            <span class="dep-card__author">Rodrigo Oliveira Carvalho</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"Aprendi a controlar a minha diabetes, eliminar a gordura do meu fígado e reduzir meu colesterol. Agradeço muito. Perdi bastante peso também. Muito obrigada!"</p>
+            <span class="dep-card__author">Ilza Maria Mansi</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"Depois que Dra. Adriana conseguiu que meu marido perdesse 5 kg e ganhou energia, eu resolvi tentar perder minha barriga com ela. Sou magra mas com a orientação profissional, pude ganhar músculos e emagrecer, com dicas simples que se encaixaram no meu dia a dia. Sabe a profissional que te move e te orienta como você precisa? Super indico."</p>
+            <span class="dep-card__author">Luciana Ferreira Carvalho Saldanha</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="dep-card__stars">★★★★</div>
+            <p class="dep-card__text">"A nutri Adriana é uma excelente profissional, super atenciosa e atualizada, cuida muito bem das restrições alimentares que tenho e me acompanha no processo de perda de massa gorda e ganho de massa magra. Envia dicas alimentares regularmente, atendimento personalizado. Atende rigorosamente no horário e seu consultório fica num ponto muito acessível do bairro. Super recomendo."</p>
+            <span class="dep-card__author">Angella Conto</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"Depois de algumas tentativas, ela foi a primeira que me deixou segura. Não me senti pressionada e vi resultados já nos primeiros 15 dias. Recomendo."</p>
+            <span class="dep-card__author">Amanda Milano</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"A Dra. Adriana é uma excelente profissional que consegue nos ajudar a atingir nossos objetivos sem radicalismo. Super atenciosa no atendimento e, principalmente, depois dele."</p>
+            <span class="dep-card__author">Kelly Donato</span>
+          </div>
+          <div class="dep-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="dep-card__stars">★★★★★</div>
+            <p class="dep-card__text">"Adriana é atenciosa com seus pacientes, tem um cuidado no seu atendimento, escuta suas necessidades. Sua devolutiva é simplesmente fantástica, respeita nossa individualidade do que gostamos de comer e equilibra nosso cardápio, nossas vontades de comer doces, industrializados e ultraprocessados. Recomendo."</p>
+            <span class="dep-card__author">Robson Batista</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep__toggle-wrap" data-aos="fade-up">
+        <button class="btn btn--outline dep__toggle-btn" id="depToggleBtn" onclick="toggleDepoimentos()">
+          Ver todos os depoimentos
+        </button>
+      </div>
     </div>
   </section>
+
+  <script>
+    function toggleDepoimentos() {
+      var hidden = document.getElementById('depHidden');
+      var btn = document.getElementById('depToggleBtn');
+      var isOpen = hidden.classList.toggle('dep__hidden--open');
+      hidden.setAttribute('aria-hidden', String(!isOpen));
+      btn.textContent = isOpen ? 'Ocultar depoimentos' : 'Ver todos os depoimentos';
+    }
+  </script>
 
   <!-- ========== DEPOIMENTO DESTAQUE ========== -->
   <section class="depoimento-destaque">

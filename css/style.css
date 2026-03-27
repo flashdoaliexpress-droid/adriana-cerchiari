@@ -348,6 +348,13 @@ a { color: inherit; text-decoration: none; transition: color var(--dur) var(--ea
 .dep-card__text { font-family: var(--sans); font-size: 0.93rem; line-height: 1.7; color: var(--text); flex: 1; }
 .dep-card__author { font-family: var(--sans); font-size: 0.82rem; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; }
 
+/* ── DEPOIMENTOS OCULTOS ── */
+.dep__hidden { display: none; margin-top: 24px; }
+.dep__hidden.dep__hidden--open { display: block; }
+.dep__grid--hidden { margin-top: 0; }
+.dep__toggle-wrap { text-align: center; margin-top: 40px; }
+.dep__toggle-btn { min-width: 220px; }
+
 /* ── DEPOIMENTO DESTAQUE ── */
 .depoimento-destaque { padding: 80px 0; background: var(--bg-alt); }
 .depo__container { max-width: 860px; margin: 0 auto; padding: 0 28px; }
